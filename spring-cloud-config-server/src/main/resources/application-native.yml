@@ -1,0 +1,16 @@
+spring:
+  application:
+     name: config-server
+  cloud:
+     config:
+        server:
+          native:
+            # 配置文件存放路径
+            search-locations: classpath:/properties/
+          bootstrap: true
+server:
+  port: 7001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka
